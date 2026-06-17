@@ -1,0 +1,125 @@
+:root {
+    --maroon: #4a0404;
+    --gold: #D4AF37;
+    --cream: #fdfbf7;
+    --dark-gold: #aa8c2b;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background-color: var(--maroon);
+    color: var(--cream);
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+}
+
+.serif { font-family: 'Playfair Display', serif; }
+.gold-text { color: var(--gold); }
+.hidden { display: none; }
+
+/* ENVELOPE PAGE */
+#envelope-page {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: radial-gradient(circle, #630606 0%, #4a0404 100%);
+}
+
+.envelope-wrapper {
+    width: 300px;
+    height: 200px;
+    background: #5d0505;
+    border: 2px solid var(--gold);
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    margin-bottom: 30px;
+}
+
+.envelope-flap {
+    position: absolute;
+    top: 0; left: 0; width: 0; height: 0;
+    border-left: 150px solid transparent;
+    border-right: 150px solid transparent;
+    border-top: 110px solid var(--gold);
+    transform-origin: top;
+    transition: 1.2s ease-in-out;
+    z-index: 2;
+}
+
+.envelope-wrapper.open .envelope-flap { transform: rotateX(180deg); }
+
+.envelope-img { width: 100%; height: 100%; object-fit: cover; }
+
+/* NAVIGATION */
+nav {
+    position: fixed;
+    top: 0; width: 100%;
+    background: rgba(74, 4, 4, 0.95);
+    border-bottom: 1px solid var(--gold);
+    padding: 15px 0;
+    z-index: 1000;
+    display: none;
+}
+
+nav ul { display: flex; justify-content: center; list-style: none; gap: 15px; flex-wrap: wrap; }
+nav a { color: var(--gold); text-decoration: none; font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+
+/* SECTIONS */
+section { min-height: 100vh; padding: 100px 20px; display: flex; flex-direction: column; align-items: center; text-align: center; }
+.section-title { font-family: 'Playfair Display', serif; font-size: 2.5rem; color: var(--gold); margin-bottom: 40px; }
+
+/* LUXURY FRAME */
+.luxury-frame img {
+    width: 100%;
+    max-width: 500px;
+    border: 12px solid var(--gold);
+    outline: 2px solid var(--maroon);
+    outline-offset: -18px;
+    margin-bottom: 20px;
+}
+
+/* CARDS */
+.cards-grid { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
+.invitation-card {
+    background: var(--maroon);
+    border: 5px double var(--gold);
+    padding: 40px 20px;
+    width: 320px;
+    background-image: url('https://www.transparenttextures.com/patterns/gold-dust.png');
+}
+
+/* SWATCHES */
+.swatch-flex { display: flex; gap: 30px; margin-top: 20px; }
+.swatch { width: 80px; height: 80px; border-radius: 50%; border: 2px solid var(--gold); }
+.maroon { background: #800000; }
+.gold { background: linear-gradient(45deg, #bf953f, #fcf6ba, #b38728); }
+
+/* BUTTONS */
+.btn-gold {
+    background: var(--gold);
+    color: var(--maroon);
+    padding: 12px 24px;
+    border: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+/* RSVP FORM */
+.rsvp-container form { width: 100%; max-width: 400px; display: flex; flex-direction: column; gap: 15px; }
+input, select { background: transparent; border: 1px solid var(--gold); padding: 12px; color: white; }
+
+#particles-js { position: fixed; width: 100%; height: 100%; z-index: -1; }
+
+@media (max-width: 600px) {
+    .section-title { font-size: 1.8rem; }
+    nav a { font-size: 0.6rem; }
+}

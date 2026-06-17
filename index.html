@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oluwaseun & Oluwatosin | #S&TLoveStory26</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+<body>
+    <div id="particles-js"></div>
+    
+    <audio id="bgMusic" loop>
+        <source src="song.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- PAGE 1: ENVELOPE HERO -->
+    <div id="envelope-page">
+        <div class="envelope-wrapper" id="envelope" onclick="openEnvelope()">
+            <div class="envelope-flap"></div>
+            <img src="envelope.jpg" alt="Wedding Invitation" class="envelope-img">
+        </div>
+        <div class="hero-names">
+            <h1 class="serif">Oluwaseun & Oluwatosin</h1>
+            <p class="hashtag">#S&TLoveStory26</p>
+            <p class="click-hint">CLICK TO OPEN ENVELOPE</p>
+        </div>
+    </div>
+
+    <!-- NAVIGATION -->
+    <nav id="mainNav">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#story">Our Story</a></li>
+            <li><a href="#celebrations">Celebrations</a></li>
+            <li><a href="#dresscode">Dress Code</a></li>
+            <li><a href="#location">Location</a></li>
+            <li><a href="#gifts">Gifts</a></li>
+            <li><a href="#rsvp">RSVP</a></li>
+        </ul>
+    </nav>
+
+    <div id="mainContent" class="hidden">
+        <!-- HOME -->
+        <section id="home">
+            <div class="luxury-frame animate__animated animate__fadeIn">
+                <img src="couple.jpg" alt="The Couple">
+                <h2 class="serif gold-text">Oluwaseun & Oluwatosin</h2>
+                <p>June 2026</p>
+            </div>
+        </section>
+
+        <!-- OUR STORY -->
+        <section id="story">
+            <h2 class="section-title">Our Story</h2>
+            <div class="story-container">
+                <p>I still remember it — freshman year, phone battery dead, just needed somewhere to charge it. There was this guy running the charging spot, already a big man on campus (400 level, while I was just a fresher finding my way around)...</p>
+                <p>He plugged in my phone, asked my name, introduced himself, and told me if I ever needed anything, I should come find him.</p>
+                <p>I did. He helped me clean up my hostel room, showed me how to survive school life, and whenever I missed home, he'd invite me over for proper home-cooked meals...</p>
+                <p>Life happened after school — we lost touch for a while. Then one day, we ran into each other again... at the gym, of all places. Turns out I was exactly what he needed.</p>
+                <p class="serif italic">"And now? That same guy who once called me his little sister... is about to call me his wife."</p>
+            </div>
+        </section>
+
+        <!-- CELEBRATIONS -->
+        <section id="celebrations">
+            <h2 class="section-title">The Celebrations</h2>
+            <div class="cards-grid">
+                <div class="invitation-card">
+                    <h3 class="serif gold-text">Traditional Wedding</h3>
+                    <p>Tuesday 24th June 2026</p>
+                    <p>10:00 AM</p>
+                    <hr>
+                    <p>Greenwich Event Center, Orchid Estate, Lekki, Lagos, Nigeria</p>
+                </div>
+                <div class="invitation-card">
+                    <h3 class="serif gold-text">White Wedding</h3>
+                    <p>Thursday 26th June 2026</p>
+                    <p>4:00 PM UTC</p>
+                    <hr>
+                    <p>De Blue Compere Villa, Friendfuin, Brazil</p>
+                </div>
+                <div class="invitation-card">
+                    <h3 class="serif gold-text">Reception</h3>
+                    <p>Thursday 26th June 2026</p>
+                    <p>7:00 PM UTC</p>
+                    <hr>
+                    <p>La Via Senepali, Friendfuin, Brazil</p>
+                </div>
+            </div>
+            <div id="countdown" class="serif"></div>
+        </section>
+
+        <!-- DRESS CODE -->
+        <section id="dresscode">
+            <h2 class="section-title">Dress Code</h2>
+            <p>We invite you to celebrate with us in our wedding colors:</p>
+            <div class="swatch-flex">
+                <div class="swatch-item">
+                    <div class="swatch maroon"></div>
+                    <p>Deep Maroon</p>
+                </div>
+                <div class="swatch-item">
+                    <div class="swatch gold"></div>
+                    <p>Royal Gold</p>
+                </div>
+            </div>
+            <p class="note">All three events follow this luxury color theme.</p>
+        </section>
+
+        <!-- LOCATION -->
+        <section id="location">
+            <h2 class="section-title">The Venues</h2>
+            <div class="location-item">
+                <h3 class="gold-text">Greenwich Event Center</h3>
+                <p>Orchid Estate, Lekki, Lagos</p>
+                <a href="https://maps.google.com" class="btn-gold">Get Directions</a>
+            </div>
+            <div class="location-item">
+                <h3 class="gold-text">De Blue Compere Villa</h3>
+                <p>Friendfuin, Brazil</p>
+                <a href="https://maps.google.com" class="btn-gold">Get Directions</a>
+            </div>
+        </section>
+
+        <!-- GIFTS -->
+        <section id="gifts">
+            <h2 class="section-title">Gift Registry</h2>
+            <div class="gift-box">
+                <h3>Bank Transfer</h3>
+                <p>Grande Bank | 9061693121</p>
+                <p>Oluwatosin Faoyemi</p>
+                <button onclick="copyAcc()" class="btn-gold">Copy Account Number</button>
+            </div>
+            <div class="gift-box luxury-home">
+                <h3>Dream Home Fund</h3>
+                <p>Help us secure our home in Orchid Estate, Lekki.</p>
+                <a href="https://wa.me/2349061693121" class="btn-gold">Purchase/Contribute via WhatsApp</a>
+            </div>
+        </section>
+
+        <!-- RSVP -->
+        <section id="rsvp">
+            <div class="rsvp-container">
+                <h2 class="section-title">RSVP</h2>
+                <form id="rsvpForm">
+                    <input type="text" placeholder="Full Name" required>
+                    <input type="tel" placeholder="Phone Number" required>
+                    <select required>
+                        <option value="">Will you be attending?</option>
+                        <option value="yes">Yes, with joy!</option>
+                        <option value="no">Regretfully, No</option>
+                    </select>
+                    <select>
+                        <option value="0">Bringing a plus one?</option>
+                        <option value="1">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                    <button type="submit" class="btn-gold">Submit Response</button>
+                </form>
+                <p class="closing-msg serif">We look forward to celebrating love with you — Oluwaseun & Oluwatosin #S&TLoveStory26</p>
+            </div>
+        </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
